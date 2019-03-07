@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { TeamsListingComponent } from './teams/teams-listing/teams-listing.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +10,8 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        TeamsListingComponent
       ],
     }).compileComponents();
   }));
@@ -23,7 +25,7 @@ describe('AppComponent', () => {
   it(`should have as title 'alpha-league'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('alpha-league');
+    expect(app.title).toEqual('Alpha League');
   });
 
   it('should render title in a h1 tag', () => {
