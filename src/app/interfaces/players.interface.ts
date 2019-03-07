@@ -19,9 +19,9 @@ interface PlayerHistory {
 }
 
 export interface PlayersPayload {
-  team_id: string;
-  name:	string;
-  age: number;
-  nationality: string;
-  position: string;
+  team_id?: string;
+  name?:	string;
+  age?: number;
+  nationality?: string;
+  position?: string;
 }

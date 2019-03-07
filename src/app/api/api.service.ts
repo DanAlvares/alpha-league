@@ -20,7 +20,7 @@ export class ApiService {
   }
 
   getPlayers(payload: PlayersPayload): Observable<Players> {
-    return this.httpClient.post<Players>(this.endpoint + ApiRoutes.getTeams, payload);
+    return this.httpClient.post<Players>(this.endpoint + ApiRoutes.getPlayers, payload);
   }
 
   getGames(payload: Game): Observable<Games> {
