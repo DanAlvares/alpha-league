@@ -1,0 +1,17 @@
+tr:nth-child(2n){
+  background-color: var(--light);
+}
+tbody tr:hover{
+  background-color: var(--light-gray);
+  cursor: pointer;
+}
+th:first-of-type,
+td:first-of-type {
+  width: 50px;
+}
+
+@media (max-width: 567px) {
+  .hide-md {
+    display: none
+  }
+}
