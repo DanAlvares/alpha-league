@@ -11,11 +11,11 @@ export interface Team {
 }
 
 export interface TeamsPayload {
-  team_id: string;
-  name:	string;
-  city:	string;
-  logo_url:	string;
-  founded:	string;
-  colour:	string;
-  budget:	number;
+  team_id?: string;
+  name?:	string;
+  city?:	string;
+  logo_url?:	string;
+  founded?:	string;
+  colour?:	string;
+  budget?:	number;
 }
