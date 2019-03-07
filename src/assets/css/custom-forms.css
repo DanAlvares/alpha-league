@@ -1,0 +1,90 @@
+.material-form {
+  margin: 10px 0;
+  position: relative;
+}
+.material-form input {
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.4);
+  padding: 30px 5px 15px 25px;
+  transition: padding 0.4s;
+}
+.material-form input:placeholder-shown + label {
+  font-size: 1rem;
+  top: 15px;
+  left: 1.5rem;
+}
+.material-form input:focus + label,
+.material-form label {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  pointer-events: none;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  transition: top 0.4s, left 0.4s, font-size 0.4s;
+}
+.material-form input::placeholder {
+  color: transparent;
+  display: none;
+}
+.material-form input:focus,
+.material-form input:not(:placeholder-shown) {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.88);
+  outline: none;
+}
+
+.material-form input:focus ~ i,
+.material-form input:not(:placeholder-shown) ~ i,
+.material-form input:focus + label,
+.material-form input:not(:placeholder-shown) + label {
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.material-form.error i,
+.material-form.error input:focus ~ i,
+.material-form.error input:not(:placeholder-shown) ~ i {
+  color: rgba(223, 11, 11, 0.4);
+}
+
+.material-form.error label,
+.material-form.error input:focus + label,
+.material-form.error input:not(:placeholder-shown) + label {
+  color: rgba(223, 11, 11, 0.6);
+}
+.material-form.error input {
+  border-bottom: solid 1px rgba(223, 11, 11, 0.4);
+}
+
+.material-form i {
+  color: rgba(0, 0, 0, 0.4);
+  left: 0.2rem;
+  position: absolute;
+  top: 1.35rem;
+}
+.material-form input:not(:placeholder-shown) .material-form input:not(:focus) + label {
+  left: 2px;
+}
+
+.start-page .material-form input {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.4);
+}
+.start-page .material-form input:focus + label,
+.start-page .material-form label {
+  color: rgba(255, 255, 255, 0.6);
+}
+.start-page .material-form input:focus,
+.start-page .material-form input:not(:placeholder-shown) {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.88);
+}
+
+.start-page .material-form input:focus ~ i,
+.start-page .material-form input:not(:placeholder-shown) ~ i,
+.start-page .material-form input:focus + label,
+.start-page .material-form input:not(:placeholder-shown) + label {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.start-page .material-form i {
+  color: rgba(255, 255, 255, 0.4);
+}

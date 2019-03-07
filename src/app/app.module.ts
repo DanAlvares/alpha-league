@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TeamsListingComponent } from './teams/teams-listing/teams-listing.component';
+import { HeaderComponent } from './core/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TeamsListingComponent,
+    HeaderComponent,
   ],
   imports: [
     AppRoutingModule,
