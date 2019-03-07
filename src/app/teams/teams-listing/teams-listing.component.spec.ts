@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TeamsListingComponent } from './teams-listing.component';
+import { HeaderComponent } from 'src/app/core/header/header.component';
 
 describe('TeamsListingComponent', () => {
   let component: TeamsListingComponent;
@@ -8,9 +9,12 @@ describe('TeamsListingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TeamsListingComponent ]
+      declarations: [
+        HeaderComponent,
+        TeamsListingComponent
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
