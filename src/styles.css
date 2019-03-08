@@ -1,8 +1,12 @@
 @import 'assets/css/bootstrap-root.css';
 @import 'assets/css/bootstrap-reboot.css';
 @import 'assets/css/bootstrap-grid.css';
+@import 'assets/css/bootstrap-card.css';
+@import 'assets/css/bootstrap-list.css';
 @import 'assets/css/bootstrap-table.css';
 @import 'assets/css/bootstrap-type.css';
 @import 'assets/css/bootstrap-utilities.css';
+@import 'assets/css/bootstrap-button.css';
 
-@import 'assets/css/custom-forms.css';
+@import 'assets/css/alphafx-global.css';
+@import 'assets/css/alphafx-forms.css';

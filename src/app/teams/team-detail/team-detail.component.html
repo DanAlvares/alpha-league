@@ -1,0 +1,11 @@
+<div *ngIf="team">
+    <img class="logo" [src]="team.logo_url" [alt]="team.name" />
+    <h2>{{ team.name }}</h2>
+
+  <div class="clearfix">
+    <div class="row">
+      <app-players class="col-6" [players]="players"></app-players>
+      <app-games class="col-6" [games]="games"></app-games>
+    </div>
+  </div>
+</div>

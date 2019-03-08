@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api/api.service';
-import { Teams, Team } from 'src/app/interfaces/teams.interface';
+import { Team } from 'src/app/interfaces/teams.interface';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -20,8 +20,8 @@ export class TeamsListingComponent implements OnInit {
   getTeams() {
     this.apiService.getTeams({})
       .pipe(map(res => res.data))
-      .subscribe((teams: Team[]) => {
-        this.teams = teams;
-      });
+      .subscribe((teams: Team[]) =>
+        this.apiService.teams = this.teams = teams
+      );
   }
 }

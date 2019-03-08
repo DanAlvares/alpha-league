@@ -1,4 +1,7 @@
-export interface Players extends Array<Player> {}
+export interface Players {
+  success: boolean;
+  data: Array<Player>;
+}
 
 export interface Player {
     id: string;

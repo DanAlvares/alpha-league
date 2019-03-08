@@ -1,4 +1,7 @@
-export interface Games extends Array<Game> {}
+export interface Games {
+  data: Array<Game>;
+  success: boolean;
+}
 
 export interface Game {
   id?:	string;
