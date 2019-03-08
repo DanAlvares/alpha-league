@@ -1,4 +1,7 @@
-export interface Players extends Array<Player> {}
+export interface Players {
+  success: boolean;
+  data: Array<Player>;
+}
 
 export interface Player {
     id: string;
@@ -19,9 +22,9 @@ interface PlayerHistory {
 }
 
 export interface PlayersPayload {
-  team_id: string;
-  name:	string;
-  age: number;
-  nationality: string;
-  position: string;
+  team_id?: string;
+  name?:	string;
+  age?: number;
+  nationality?: string;
+  position?: string;
 }

@@ -15,3 +15,5 @@ Although I would be happy with React, Vue... (Or no framework) I chose Angular f
 ## CSS
 I have gone for pure CSS as it is too easy to get tied down with a CSS abstraction. It is trivial to spin up an Angular user LESS or SCSS but is easier to migrate to SCSS than it would be to remove it from a project. With current developments in CSS (and good browser support) it is far more beneficial. For example: CSS Custom Properties (variables) can be updated by JavaScript or in Dev tools, on the fly. 
 
+## Workflow
+I have used gitflow workflow process. Usually I would be creating feature branches and merging to develop once a feature is done but in this project I just worked on the develop branch and merging to master automatically deploys to Netlify. https://ng-alpha-football.netlify.com/

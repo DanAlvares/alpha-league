@@ -1,0 +1,10 @@
+ li img {
+  float: left;
+  margin-right: .75rem;
+  width: 40px;
+  box-shadow: 2px 2px 2px #aaa;
+}
+li:hover {
+  background-color: var(--active-color);
+  cursor: pointer;
+}
