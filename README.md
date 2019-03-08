@@ -6,6 +6,8 @@
 	$ npm i
 	$ npm start 
 
+Or you can just [Open in Stackblitz](https://stackblitz.com/github/DanAlvares/alpha-league)
+
 ## Why a Framework?
 There are always trade-offs. There is of course the risk of being tied to a framework which may or may not be a bad thing, but I feel there are so many components frontend development these days (security/performance/accessibility/internationalisation etc), a framework can get developers most of the there. To me, no framework effectively means custom built framework, which would be far more work to maintain, scale, and could be more difficult when on-boarding new developers.
 
