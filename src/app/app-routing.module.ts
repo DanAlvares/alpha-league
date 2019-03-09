@@ -18,7 +18,8 @@ const routes: Routes = [
   },
   {
     path: 'teams/:id',
-    component: TeamDetailComponent
+    component: TeamDetailComponent,
+    resolve: { data: TeamResolver }
   },
   {
     path: 'players',

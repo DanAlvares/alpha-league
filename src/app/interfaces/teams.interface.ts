@@ -1,4 +1,5 @@
 import { Game } from './games.interface';
+import { Player } from './players.interface';
 
 export interface Teams {
   data: Array<Team>;
@@ -14,6 +15,7 @@ export interface Team {
     colour: string;
     budget: string;
     games: Game[];
+    players: Player[];
 }
 
 export interface TeamsPayload {

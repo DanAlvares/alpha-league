@@ -20,14 +20,7 @@ export class TeamDetailComponent implements OnInit {
 
   ngOnInit() {
     const teamId = this.route.snapshot.params.id;
-    this.team = this.apiService.teams.filter(team => teamId === team.id)[0];
-    this.getPlayers(teamId);
-    this.games = this.apiService.getGamesByTeam(teamId);
-  }
-
-  getPlayers(teamId: string): void {
-    this.apiService.getPlayers({ team_id: teamId})
-    .pipe(map(res => res.data))
-    .subscribe((players: Player[]) => this.players = players);
+    const teams = this.route.snapshot.data.data;
+    this.team = teams.filter(team => teamId === team.id)[0];
   }
 }
