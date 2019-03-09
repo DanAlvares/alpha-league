@@ -10,7 +10,7 @@ td:first-of-type {
   width: 50px;
 }
 
-@media (max-width: var(--breakpoint-sm)) {
+@media (max-width: 576px) {
   .hide-md {
     display: none
   }

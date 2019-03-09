@@ -5,18 +5,22 @@
     <tr>
       <th>&nbsp;</th>
       <th>Name</th>
-      <th class="hide-md">Founded</th>
-      <th class="hide-md">Budget</th>
-      <th>Pts</th>
+      <th class="text-center hide-md">Played</th>
+      <th class="text-center hide-md">Won</th>
+      <th class="text-center hide-md">Lost</th>
+      <th class="text-center hide-md">Drawn</th>
+      <th class="text-center">Points</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let team of teams" [routerLink]="['/teams', team.id]">
       <td class="text-center"><img height="30" [src]="team.logo_url" [alt]="team.name" /></td>
       <td>{{ team.name }}</td>
-      <td class="hide-md">{{ team.founded }}</td>
-      <td class="hide-md">{{ team.budget | currency : 'GBP'  }}</td>
-      <td></td>
+      <td class="text-center hide-md">{{ team.games.length }}</td>
+      <td class="text-center hide-md">{{ gamesWon(team) }}</td>
+      <td class="text-center hide-md">{{ gamesLost(team) }}</td>
+      <td class="text-center hide-md">{{ gamesDrawn(team) }}</td>
+      <td class="text-center">{{ totalPoints(team) }}</td>
     </tr>
   </tbody>
 </table>

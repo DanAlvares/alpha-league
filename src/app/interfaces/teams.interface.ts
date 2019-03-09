@@ -1,3 +1,5 @@
+import { Game } from './games.interface';
+
 export interface Teams {
   data: Array<Team>;
   success: boolean;
@@ -11,6 +13,7 @@ export interface Team {
     founded: string;
     colour: string;
     budget: string;
+    games: Game[];
 }
 
 export interface TeamsPayload {
