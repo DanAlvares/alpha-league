@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { Player } from 'src/app/interfaces/players.interface';
 
 @Component({
-  selector: 'app-players',
-  templateUrl: './players.component.html',
-  styleUrls: ['./players.component.css']
+  selector: 'app-team-players',
+  templateUrl: './team-players.component.html',
+  styleUrls: ['./team-players.component.css']
 })
-export class PlayersComponent {
+export class TeamPlayersComponent {
   @Input() players: Player[];
 
 }

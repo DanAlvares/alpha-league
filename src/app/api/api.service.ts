@@ -12,23 +12,22 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  public teams: Team[] = [];
+  public teams: Team[];
 
-  public games: Game[] = [];
+  public players: Players;
+
+  public games: Games;
 
   private endpoint = environment.API_ENDPOINT;
 
   constructor(private httpClient: HttpClient) { }
-
-  getGamesByTeam(teamId: string) {
-    return this.games.filter(game => teamId === game.team_one_id);
-  }
 
   getTeams(payload: TeamsPayload): Observable<Teams> {
     return this.httpClient.post<Teams>(this.endpoint + ApiRoutes.getTeams, payload);
   }
 
   getPlayers(payload: PlayersPayload): Observable<Players> {
+    if (this.players) { return of(this.players); }
     return this.httpClient.post<Players>(this.endpoint + ApiRoutes.getPlayers, payload);
   }
 

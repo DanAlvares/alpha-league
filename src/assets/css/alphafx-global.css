@@ -3,13 +3,7 @@ body {
     scroll-behavior: smooth;
 }
 
-body {
-    background: #fefefe;
-    background: -moz-linear-gradient(-45deg, #fefefe 0%, #e2e2e2 100%);
-    background: -webkit-linear-gradient(-45deg, #fefefe 0%, #e2e2e2 100%);
-    background: linear-gradient(135deg, #fefefe 0%, #e2e2e2 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e2e2e2',GradientType=1 );
-
-    background-attachment: fixed;
-    font-size: 0.88rem;
+h2{
+  padding: 2rem 1rem;
 }
+

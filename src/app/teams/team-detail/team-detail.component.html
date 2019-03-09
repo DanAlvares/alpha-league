@@ -1,11 +1,22 @@
 <div *ngIf="team">
-    <img class="logo" [src]="team.logo_url" [alt]="team.name" />
-    <h2>{{ team.name }}</h2>
+  <div class="team-info clearfix">
+    <div class="container">
+      <img class="logo" [src]="team.logo_url" [alt]="team.name" />
+      <h2>{{ team.name }}
+        <span class="shirt" [style.background]="team.colour">
+          <img src="../../../assets/shirt-outline.png" />
+        </span>
+      </h2>
+      <p><strong>Budget: </strong> {{ team.budget | currency : 'GBP' }}</p>
+      <p><strong>Founded: </strong> {{ team.founded }}</p>
+      <p><strong>City: </strong> {{ team.city }}</p>
+    </div>
+  </div>
 
-  <div class="clearfix">
+  <div class="container">
     <div class="row">
-      <app-players class="col-6" [players]="players"></app-players>
-      <app-games class="col-6" [games]="games"></app-games>
+      <app-team-players class="col-6" [players]="team.players"></app-team-players>
+      <app-games class="col-6" [games]="team.games"></app-games>
     </div>
   </div>
 </div>

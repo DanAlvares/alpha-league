@@ -6,8 +6,15 @@
   <div class="card-body">
       <app-new-game *ngIf="addNewGame"></app-new-game>
       <ul class="list-group" *ngIf="!addNewGame">
+        <li class="list-group-item header">
+          <strong>Date Played</strong>
+          <strong>Goals For</strong>
+          <strong>Goals Against</strong>
+        </li>
         <li class="list-group-item" *ngFor="let game of games">
-          {{ game.date | date: 'dd MMM yyyy, HH:mm' }}
+          <span>{{ game.date | date: 'dd MMM yyyy, HH:mm' }}</span>
+          <span>{{ game.team_one_goals }}</span>
+          <span>{{ game.team_two_goals }}</span>
         </li>
       </ul>
     </div>

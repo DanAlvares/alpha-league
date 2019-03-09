@@ -7,10 +7,4 @@ import { map } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styles: [`main{padding-bottom: 2rem}`]
 })
-export class AppComponent {
-  constructor(private apiService: ApiService) {
-    this.apiService.getGames({})
-    .pipe(map(res => res.data))
-    .subscribe(games => this.apiService.games = games);
-  }
-}
+export class AppComponent {}

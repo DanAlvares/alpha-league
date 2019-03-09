@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TeamsListingComponent } from './teams/teams-listing/teams-listing.component';
 import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
+import { PlayersComponent } from './teams/players/players.component';
+import { TeamResolver } from './teams/team.resolver';
 
 const routes: Routes = [
   {
@@ -11,11 +13,17 @@ const routes: Routes = [
   },
   {
     path: 'teams',
-    component: TeamsListingComponent
+    component: TeamsListingComponent,
+    resolve: { data: TeamResolver }
   },
   {
     path: 'teams/:id',
-    component: TeamDetailComponent
+    component: TeamDetailComponent,
+    resolve: { data: TeamResolver }
+  },
+  {
+    path: 'players',
+    component: PlayersComponent
   },
   { path: '**', redirectTo: '' }
 ];

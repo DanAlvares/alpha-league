@@ -7,9 +7,10 @@ import { TeamsListingComponent } from './teams/teams-listing/teams-listing.compo
 import { HeaderComponent } from './core/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TeamDetailComponent } from './teams/team-detail/team-detail.component';
-import { PlayersComponent } from './teams/team-detail/players/players.component';
+import { TeamPlayersComponent } from './teams/team-detail/team-players/team-players.component';
 import { GamesComponent } from './teams/team-detail/games/games.component';
 import { NewGameComponent } from './teams/team-detail/games/new-game/new-game.component';
+import { PlayersComponent } from './teams/players/players.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NewGameComponent } from './teams/team-detail/games/new-game/new-game.co
     TeamsListingComponent,
     HeaderComponent,
     TeamDetailComponent,
+    TeamPlayersComponent,
     PlayersComponent,
     GamesComponent,
     NewGameComponent,
@@ -26,7 +28,6 @@ import { NewGameComponent } from './teams/team-detail/games/new-game/new-game.co
     BrowserModule,
     HttpClientModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
