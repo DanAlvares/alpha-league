@@ -6,6 +6,13 @@
 	$ npm i
 	$ npm start 
 
+## Running the tests  
+	$ npm test 
+	$ npm run test:coverage 
+By default, the Angular CLI sets up Jasmine & Karma as the testing framework. I replaced that with Jest.   
+There are 2 commands for running tests, with or without coverage. [View test coverage report](https://ng-alpha-football.netlify.com/coverage/lcov-report)  
+ 
+
 ## Why a Framework?
 There are always trade-offs. There is of course the risk of being tied to a framework which may or may not be a bad thing, but I feel there are so many components frontend development these days (security/performance/accessibility/internationalisation etc), a framework can get developers most of the there. To me, no framework effectively means custom built framework, which would be far more work to maintain, scale, and could be more difficult when on-boarding new developers.
 
@@ -17,3 +24,4 @@ I have gone for pure CSS as it is too easy to get tied down with a CSS abstracti
 
 ## Workflow
 I have used gitflow workflow process. Usually I would be creating feature branches and merging to develop once a feature is done but in this project I just worked on the develop branch and merging to master automatically deploys to Netlify. https://ng-alpha-football.netlify.com/
+
