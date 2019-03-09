@@ -1,0 +1,124 @@
+<html><head><meta charset="utf-8"/><title>Test Report</title><style type="text/css">html, body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+body {
+	padding: 1rem;
+	font-size: 0.85rem;
+}
+header {
+	display: flex;
+	align-items: center;
+}
+#title {
+	margin: 0;
+	flex-grow: 1;
+}
+#logo {
+	height: 4rem;
+}
+#timestamp {
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 0.5rem;
+}
+#summary {
+	color: #999;
+	margin-bottom: 1rem;
+}
+.suite-info {
+	padding: 1rem;
+	background-color: #eee;
+	border-bottom: 2px solid #999;
+	color: #999;
+	display: flex;
+	align-items: center;
+}
+.suite-info .suite-path {
+	font-weight: bold;
+	word-break: break-all;
+	flex-grow: 1;
+}
+.suite-info .suite-time {
+	margin-left: 0.5rem;
+	padding: 0.2rem 0.3rem;
+	font-size: 0.75rem;
+}
+.suite-info .suite-time.warn {
+	background-color: #D8000C;
+	color: #fff;
+}
+.suite-table {
+	width: 100%;
+	font-size: 0.85rem;
+	margin-bottom: 1em;
+}
+.suite-table td {
+	padding: 0.5rem;
+}
+.suite-table tr.passed {
+	background-color: #DFF2BF;
+	color: #4F8A10;
+}
+.suite-table tr.pending {
+	background-color: #FEEFB3;
+	color: #9F6000;
+}
+.suite-table tr.failed {
+	background-color: #FFBABA;
+	color: #D8000C;
+}
+.suite-table td {
+	font-size: 0.85rem;
+	border-bottom: 1px solid #aaa;
+	vertical-align: top;
+}
+.suite-table td.suite {
+	font-weight: bold;
+	width: 20%;
+}
+.suite-table td.test {
+	font-style: italic;
+	width: 60%;
+}
+.suite-table td.test .failureMsg {
+	font-size: 1rem;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+}
+.suite-table td.result {
+	width: 20%;
+	text-align: right;
+}
+
+/* CONSOLE LOGS */
+.suite-consolelog {
+	margin-bottom: 2rem;
+	padding: 1rem;
+	background-color: #efefef;
+}
+.suite-consolelog-header {
+	font-weight: bold;
+}
+.suite-consolelog-item {
+	padding: 0.5rem;
+}
+.suite-consolelog-item pre {
+	margin: 0;
+}
+.suite-consolelog-item-origin {
+	color: #777;
+	font-weight: bold;
+}
+.suite-consolelog-item-message {
+	color: #000;
+	font-size: 1rem;
+	padding: 0 0.5rem;
+}
+</style></head><body><div id="jesthtml-content"><header><h1 id="title">Test Report</h1></header><div id="metadata-container"><div id="timestamp">Start: 2019-03-09 22:02:43</div><div id="summary">15 tests -- 15 passed / 0 failed / 0 pending</div></div><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/teams/players/players.component.spec.ts</div><div class="suite-time">2.34s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">PlayersComponent</td><td class="test">should create</td><td class="result">passed in 0.105s</td></tr></table><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/teams/team-detail/games/new-game/new-game.component.spec.ts</div><div class="suite-time">2.353s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">NewGameComponent</td><td class="test">should create</td><td class="result">passed in 0.12s</td></tr></table><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/teams/team-detail/team-players/team-players.component.spec.ts</div><div class="suite-time">2.368s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">TeamPlayersComponent</td><td class="test">should create</td><td class="result">passed in 0.137s</td></tr></table><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/core/header/header.component.spec.ts</div><div class="suite-time">2.39s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">HeaderComponent</td><td class="test">should create</td><td class="result">passed in 0.117s</td></tr></table><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/teams/team-detail/games/games.component.spec.ts</div><div class="suite-time">2.422s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">GamesComponent</td><td class="test">should create</td><td class="result">passed in 0.183s</td></tr></table><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/teams/team-detail/team-detail.component.spec.ts</div><div class="suite-time">2.483s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">TeamDetailComponent</td><td class="test">should create</td><td class="result">passed in 0.17s</td></tr></table><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/app.component.spec.ts</div><div class="suite-time">2.534s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">AppComponent</td><td class="test">should create the app</td><td class="result">passed in 0.186s</td></tr><tr class="passed"><td class="suite">AppComponent</td><td class="test">should render title in a h1 tag</td><td class="result">passed in 0.074s</td></tr></table><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/teams/team.resolver.spec.ts</div><div class="suite-time">0.305s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">TeamResolverService</td><td class="test">should be created</td><td class="result">passed in 0.012s</td></tr></table><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/api/api.service.spec.ts</div><div class="suite-time">0.317s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">ApiService</td><td class="test">should be created</td><td class="result">passed in 0.012s</td></tr><tr class="passed"><td class="suite">ApiService &gt; Teams</td><td class="test">should get teams</td><td class="result">passed in 0.009s</td></tr><tr class="passed"><td class="suite">ApiService &gt; Players</td><td class="test">should get players of a team</td><td class="result">passed in 0.007s</td></tr><tr class="passed"><td class="suite">ApiService &gt; Games</td><td class="test">should get games of a team</td><td class="result">passed in 0.009s</td></tr><tr class="passed"><td class="suite">ApiService &gt; Games</td><td class="test">should add a new game</td><td class="result">passed in 0.006s</td></tr></table><div class="suite-info"><div class="suite-path">/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/teams/teams-listing/teams-listing.component.spec.ts</div><div class="suite-time">0.334s</div></div><table class="suite-table" cellspacing="0" cellpadding="0"><tr class="passed"><td class="suite">TeamsListingComponent</td><td class="test">should create</td><td class="result">passed in 0.06s</td></tr></table></div></body></html>

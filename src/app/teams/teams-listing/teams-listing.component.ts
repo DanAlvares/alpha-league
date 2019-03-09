@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class TeamsListingComponent implements OnInit {
   teams: Team[] = [];
 
-  constructor(private apiService: ApiService, private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.teams = this.route.snapshot.data.data;
