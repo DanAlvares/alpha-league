@@ -1,0 +1,21 @@
+:host {
+  align-items: center;
+  color: #333;
+  display: flex;
+  flex-flow: column;
+  font-weight: bold;
+  height: 100vh;
+  justify-content: center;
+  margin-top: -1rem;
+  padding: 0;
+}
+
+strong {
+  line-height: 16rem;
+  font-size: 16rem;
+}
+
+p {
+  line-height: 2rem;
+  font-size: 2rem;
+}
