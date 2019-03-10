@@ -1,0 +1,32 @@
+<h2>Players</h2>
+
+<div class="form-group material-form">
+  <input class="form-control" id="playerSearch" (keyup)="filterPlayers($event)" type="text" placeholder="Search players" />
+  <label class="control-label" for="playerSearch">Search players</label>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th class="hide-md">Value</th>
+      <th class="hide-md">Nationality</th>
+      <th class="hide-md text-center">Age</th>
+      <th class="text-center">Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of playersList" [routerLink]="['/players', player.id]">
+      <td><span>{{ player.name[0] }}</span></td>
+      <td>{{ player.name }}</td>
+      <td class="hide-md">{{ player.value | currency : 'GBP' }}</td>
+      <td class="hide-md">
+        <img [src]="player.flag_url" width="30" [alt]="player.nationality" [title]="player.nationality" />
+        {{ player.nationality }}
+      </td>
+      <td class="hide-md text-center">{{ player.age }}</td>
+      <td class="text-center">{{ player.position }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -14,7 +14,7 @@ Or you can just [open in Stackblitz](https://stackblitz.com/github/DanAlvares/al
 By default, the Angular CLI sets up Jasmine & Karma as the testing framework. I replaced that with Jest.   
 There are 2 commands for running tests, with or without coverage. Tests run on commit. This might scale but for now, they run in under 10 seconds, which I think is acceptable.   
 [View test coverage](https://ng-alpha-football.netlify.com/coverage/lcov-report)    
-[View test report](https://ng-alpha-football.netlify.com/assets/test-report.html)  
+[View test report](https://ng-alpha-football.netlify.com/test-report.html)  
  
 
 ## Why a Framework?

@@ -1,4 +1,4 @@
-/docs /docs
-/coverage /coverage/lcov-report
+/docs /docs/index.html
+/coverage /coverage/lcov-report/index.html
 /test-report.html /test-report.html
 /*    /

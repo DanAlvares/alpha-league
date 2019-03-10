@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./teams-listing.component.css']
 })
 export class TeamsListingComponent implements OnInit {
-  teams: Team[] = [];
+  public teams: Team[] = [];
 
   constructor(private route: ActivatedRoute) { }
 

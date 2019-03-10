@@ -1,0 +1,17 @@
+tr td:first-child span {
+  --size: 35px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: block;
+  height: var(--size);
+  line-height: var(--size);
+  text-align: center;
+  width: var(--size);
+}
+
+.material-form {
+  float:right;
+  margin: -3rem 0 1rem;
+  max-width: 100%;
+  width: 400px;
+}

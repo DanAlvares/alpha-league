@@ -5,10 +5,15 @@ h2{
   font-size: 11vmin;
   padding: 1rem 0 0;
 }
-.team-info .logo{
+.team-info {
+  background-color: #eee;
+  margin-top: -1rem;
+}
+.team-info .logo {
   float: left;
+  max-width: 200px;
+  max-height: 200px;
   padding: 1rem;
-  width:200px
 }
 .team-info p {
   margin-bottom: 0;
