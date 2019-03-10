@@ -8,7 +8,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "docs": "./node_modules/.bin/compodoc -p src/tsconfig.app.json -n \"Alpha League\" -r 4201 -s -d ./docs/ -w --theme Laravel"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +33,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/jest": "^24.0.11",
+    "@compodoc/compodoc": "^1.1.8",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "husky": "^1.3.1",
