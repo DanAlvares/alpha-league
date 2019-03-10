@@ -6,6 +6,8 @@
 	$ npm i
 	$ npm start 
 
+Or you can just [open in Stackblitz](https://stackblitz.com/github/DanAlvares/alpha-league) to view the code.
+
 ## Running the tests  
 	$ npm test 
 	$ npm run test:coverage 
