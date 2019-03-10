@@ -1,1 +1,4 @@
-/*    /index.html
+/docs /docs
+/coverage /coverage/lcov-report
+/test-report.html /test-report.html
+/*    /
