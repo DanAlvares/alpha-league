@@ -21,7 +21,10 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/_redirects"
+              "src/_redirects",
+              "src/docs",
+              "src/coverage",
+              "src/test-report.html"
             ],
             "styles": [
               "src/styles.css"
@@ -83,10 +86,8 @@
             ],
             "scripts": [],
             "assets": [
-              "docs/",
               "src/favicon.ico",
-              "src/assets",
-              "test-report.html"
+              "src/assets"
             ]
           }
         },
