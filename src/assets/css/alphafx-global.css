@@ -10,12 +10,10 @@ h2{
 tr:nth-child(2n){
   background-color: var(--light);
 }
-tbody tr:hover{
-  background-color: var(--light-gray);
-  cursor: pointer;
-}
-th:first-of-type,
-td:first-of-type {
+.players-list th:first-of-type,
+.players-list td:first-of-type,
+.teams-list th:first-of-type,
+.teams-list td:first-of-type {
   width: 50px;
 }
 

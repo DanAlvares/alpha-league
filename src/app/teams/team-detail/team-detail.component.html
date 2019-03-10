@@ -13,10 +13,22 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <app-team-players class="col-6" [players]="team.players"></app-team-players>
-      <app-games class="col-6" [games]="team.games"></app-games>
+  <div class="container pt-4">
+  <div class="row">
+    <section class="col-6">
+      <h3>Players</h3>
+      <app-players-list [players]="team.players" [hide]="'Team,Value,Nationality,Age'"></app-players-list>
+    </section>
+
+    <section class="col-6">
+        <button class="btn btn-primary float-right" (click)="addNewGame = true">Add game</button>
+        <h3>Games</h3>
+        <app-games [games]="team.games"></app-games>
+      </section>
     </div>
   </div>
 </div>
+
+<app-modal [modalHeading]="'Add a new game'" (close)="addNewGame = false" *ngIf="addNewGame">
+  <app-new-game [teamId]="team.id"></app-new-game>
+</app-modal>

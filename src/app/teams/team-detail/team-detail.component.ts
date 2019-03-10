@@ -15,6 +15,7 @@ export class TeamDetailComponent implements OnInit {
   public team: Team;
   public games: Game[];
   public players: Player[];
+  public addNewGame: boolean;
 
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 

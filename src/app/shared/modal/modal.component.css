@@ -1,0 +1,40 @@
+.modal {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  left: 50%;
+  max-height: 95%;
+  max-width: 95%;
+  position: fixed;
+  padding: 2rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  z-index: 9999;
+  transition: opacity .2s ease-out, transform .2s ease-out;
+}
+.modal .close {
+  background: none;
+  border: none;
+  color: var(--dark);
+  cursor: pointer;
+  font-size: 3rem;
+  line-height: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.modal h2 {
+  padding: 0;
+  position: relative;
+  top:-1rem;
+}
+.overlay {
+  background: rgba(0,0,0,.3);
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 900;
+}

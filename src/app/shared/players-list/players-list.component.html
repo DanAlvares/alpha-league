@@ -1,0 +1,27 @@
+<table class="table players-list">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th [hidden]="hideColumn('Team')" class="hide-md">Team</th>
+      <th [hidden]="hideColumn('Value')" class="hide-md">Value</th>
+      <th [hidden]="hideColumn('Nationality')" class="hide-md">Nationality</th>
+      <th [hidden]="hideColumn('Age')" class="hide-md text-center">Age</th>
+      <th [hidden]="hideColumn('Position')" class="text-center">Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of players">
+      <td><span>{{ player.name[0] }}</span></td>
+      <td><a [routerLink]="['/players', player.id]">{{ player.name }}</a></td>
+      <td [hidden]="hideColumn('Team')"><a [routerLink]="['/teams', player.team_id]">{{ player.team_name }}</a></td>
+      <td [hidden]="hideColumn('Value')" class="hide-md">{{ player.value | currency : 'GBP' }}</td>
+      <td [hidden]="hideColumn('Nationality')" class="hide-md">
+        <img [src]="player.flag_url" width="30" [alt]="player.nationality" [title]="player.nationality" />
+        {{ player.nationality }}
+      </td>
+      <td [hidden]="hideColumn('Age')" class="hide-md text-center">{{ player.age }}</td>
+      <td [hidden]="hideColumn('Position')" class="text-center">{{ player.position }}</td>
+    </tr>
+  </tbody>
+</table>

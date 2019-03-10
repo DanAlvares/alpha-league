@@ -1,26 +1,28 @@
-<h2>Teams</h2>
+<div class="container">
+  <h2>Teams</h2>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>&nbsp;</th>
-      <th>Name</th>
-      <th class="text-center hide-md">Played</th>
-      <th class="text-center hide-md">Won</th>
-      <th class="text-center hide-md">Lost</th>
-      <th class="text-center hide-md">Drawn</th>
-      <th class="text-center">Points</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let team of teams" [routerLink]="['/teams', team.id]">
-      <td class="text-center"><img height="30" [src]="team.logo_url" [alt]="team.name" /></td>
-      <td>{{ team.name }}</td>
-      <td class="text-center hide-md">{{ team.games.length }}</td>
-      <td class="text-center hide-md">{{ gamesWon(team) }}</td>
-      <td class="text-center hide-md">{{ gamesLost(team) }}</td>
-      <td class="text-center hide-md">{{ gamesDrawn(team) }}</td>
-      <td class="text-center">{{ totalPoints(team) }}</td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table teams-list">
+    <thead>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Name</th>
+        <th class="text-center hide-md">Played</th>
+        <th class="text-center hide-md">Won</th>
+        <th class="text-center hide-md">Lost</th>
+        <th class="text-center hide-md">Drawn</th>
+        <th class="text-center">Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let team of teams">
+        <td class="text-center"><img height="30" [src]="team.logo_url" [alt]="team.name" /></td>
+        <td><a [routerLink]="['/teams', team.id]">{{ team.name }}</a></td>
+        <td class="text-center hide-md">{{ team.games.length }}</td>
+        <td class="text-center hide-md">{{ gamesWon(team) }}</td>
+        <td class="text-center hide-md">{{ gamesLost(team) }}</td>
+        <td class="text-center hide-md">{{ gamesDrawn(team) }}</td>
+        <td class="text-center">{{ totalPoints(team) }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

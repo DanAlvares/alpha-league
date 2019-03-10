@@ -1,0 +1,10 @@
+tr td:first-child span {
+  --size: 35px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: block;
+  height: var(--size);
+  line-height: var(--size);
+  text-align: center;
+  width: var(--size);
+}

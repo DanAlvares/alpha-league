@@ -8,6 +8,7 @@ h2{
 .team-info {
   background-color: #eee;
   margin-top: -1rem;
+  padding-bottom: 1rem;
 }
 .team-info .logo {
   float: left;

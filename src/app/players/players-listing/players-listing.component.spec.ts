@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlayersComponent } from './players-listing.component';
 import { RouterModule, ActivatedRoute } from '@angular/router';
+import { PlayersListComponent } from 'src/app/shared/players-list/players-list.component';
 
 describe('PlayersComponent', () => {
   let component: PlayersComponent;
@@ -18,7 +19,7 @@ describe('PlayersComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterModule],
-      declarations: [ PlayersComponent ],
+      declarations: [ PlayersComponent, PlayersListComponent ],
       providers: [
       { provide: ActivatedRoute, useValue: MockActivatedRoute }
       ]

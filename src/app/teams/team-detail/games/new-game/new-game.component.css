@@ -1,0 +1,13 @@
+.material-form {
+  margin: 0 0 1.5rem;
+  flex: 1;
+}
+.material-form:first-child {
+  margin-right: 1.5rem;
+}
+.material-form  + .material-form {
+  margin-left: 1.5rem;
+}
+.flex {
+  display: flex;
+}

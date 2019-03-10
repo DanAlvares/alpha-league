@@ -6,6 +6,7 @@ export interface Players {
 export interface Player {
     id: string;
     team_id: string;
+    team_name: string;
     name: string;
     age: number;
     nationality: string;

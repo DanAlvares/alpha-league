@@ -1,0 +1,7 @@
+<div class="modal modal-wide">
+    <button class="close" (click)="onClose()">&times;</button>
+    <h2 class="text-left">{{ modalHeading }}</h2>
+
+    <ng-content></ng-content>
+</div>
+<span class="overlay" (click)="onClose()"></span>
