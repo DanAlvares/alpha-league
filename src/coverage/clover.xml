@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1552251284903" clover="3.2.0">
-  <project timestamp="1552251284903" name="All files">
-    <metrics statements="148" coveredstatements="128" conditionals="13" coveredconditionals="2" methods="48" coveredmethods="36" elements="209" coveredelements="166" complexity="0" loc="148" ncloc="148" packages="13" files="23" classes="23"/>
+<coverage generated="1552252556453" clover="3.2.0">
+  <project timestamp="1552252556454" name="All files">
+    <metrics statements="153" coveredstatements="133" conditionals="13" coveredconditionals="2" methods="50" coveredmethods="38" elements="216" coveredelements="173" complexity="0" loc="153" ncloc="153" packages="14" files="25" classes="25"/>
     <package name="src">
       <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="jestGlobalMocks.ts" path="/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/jestGlobalMocks.ts">
         <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="12" type="stmt"/>
-        <line num="2" count="12" type="stmt"/>
-        <line num="5" count="12" type="stmt"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="5" count="13" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="17" count="12" type="stmt"/>
+        <line num="17" count="13" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
       </file>
     </package>
@@ -70,6 +70,20 @@
         <line num="8" count="3" type="stmt"/>
         <line num="12" count="3" type="stmt"/>
         <line num="15" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.page-not-found">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="page-not-found.component.html" path="/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/page-not-found/page-not-found.component.html">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="page-not-found.component.ts" path="/Users/Daniel/Dropbox/Projects/GitHub/alpha-league/src/app/page-not-found/page-not-found.component.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.players.players-listing">
