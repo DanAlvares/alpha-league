@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Alpha League</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/Laravel.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">Alpha League</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="alpha-league">Alpha League</h1>
+<h2 id="running-the-app">Running the app</h2>
+<div><pre class="line-numbers"><code class="language-none">$ git clone &lt;REPO_URL&gt;
+$ cd alpha-league
+$ npm i
+$ npm start </code></pre></div><h2 id="running-the-tests">Running the tests</h2>
+<div><pre class="line-numbers"><code class="language-none">$ npm test 
+$ npm run test:coverage </code></pre></div><p>By default, the Angular CLI sets up Jasmine &amp; Karma as the testing framework. I replaced that with Jest.<br>There are 2 commands for running tests, with or without coverage. Tests run on commit. This might scale but for now, they run in under 10 seconds, which I think is acceptable.<br><a href="https://ng-alpha-football.netlify.com/coverage/lcov-report">View test coverage</a><br><a href="https://ng-alpha-football.netlify.com/assets/test-report.html">View test report</a>  </p>
+<h2 id="why-a-framework">Why a Framework?</h2>
+<p>There are always trade-offs. There is of course the risk of being tied to a framework which may or may not be a bad thing, but I feel there are so many components frontend development these days (security/performance/accessibility/internationalisation etc), a framework can get developers most of the there. To me, no framework effectively means custom built framework, which would be far more work to maintain, scale, and could be more difficult when on-boarding new developers.</p>
+<h2 id="why-i-used-angular">Why I used Angular?</h2>
+<p>Although I would be happy with React, Vue... (Or no framework) I chose Angular for this project because I tend to work a little quicker. Overall though, Angular is probably the most opinionated of major JS Frameworks which makes it easier to maintain standards in the codebase and amongst the team. It boilerplates a lot, promoting unit tests and best practices on all components/services etc. and uses TypeScript by default. Making it &#39;that&#39; much harder to introduce bad habits. It also does a great job lazy loading. Angular also has &#39;Elements&#39;. A feature that can be utilised to create vanilla Web Components custom pre-built Angular components, then user those web components in any Vue, React, Pure JS app etc.</p>
+<h2 id="css">CSS</h2>
+<p>I have gone for pure CSS as it is too easy to get tied down with a CSS abstraction. It is trivial to spin up an Angular user LESS or SCSS but is easier to migrate to SCSS than it would be to remove it from a project. With current developments in CSS (and good browser support) it is far more beneficial. For example: CSS Custom Properties (variables) can be updated by JavaScript or in Dev tools, on the fly. </p>
+<h2 id="workflow">Workflow</h2>
+<p>I have used gitflow workflow process. Usually I would be creating feature branches and merging to develop once a feature is done but in this project I just worked on the develop branch and merging to master automatically deploys to Netlify. https://ng-alpha-football.netlify.com/</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
