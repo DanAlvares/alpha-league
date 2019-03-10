@@ -1,17 +1,25 @@
 <form (ngSubmit)="addGame(form)" name="form" #form="ngForm" novalidate>
+
+  <div class="select">
+    <select name="team" id="team" class="form-group material-form" [(ngModel)]="gameData.team_two_id">
+      <option value="">Select a team</option>
+      <option *ngFor="let team of teams" [hidden]="team.id === teamId" [value]="team.id">{{ team.name }}</option>
+    </select>
+  </div>
+
   <div class="flex">
-    <div class="form-group input material-form" [class.error]="teamOneScore.invalid && form.submitted">
-      <input class="form-control" id="teamOneScore" name="teamOneScore" #teamOneScore="ngModel" [(ngModel)]="gameData.team_one_score" type="number" placeholder="Team One Score" required />
-      <label class="control-label" for="teamOneScore">Team One Score</label>
+    <div class="form-group input material-form" [class.error]="teamOneGoals.invalid && form.submitted">
+      <input class="form-control" id="teamOneGoals" name="teamOneGoals" #teamOneGoals="ngModel" [(ngModel)]="gameData.team_one_goals" type="number" placeholder="Team One Goals" required />
+      <label class="control-label" for="teamOneGoals">Team One Goals</label>
     </div>
-    <div class="form-group input material-form" [class.error]="teamTwoScore.invalid && form.submitted">
-      <input class="form-control" id="teamTwoScore" name="teamTwoScore" #teamTwoScore="ngModel" [(ngModel)]="gameData.team_two_score" type="number" placeholder="Team Two Score" required />
-      <label class="control-label" for="teamTwoScore">Team Two Score</label>
+    <div class="form-group input material-form" [class.error]="teamTwoGoals.invalid && form.submitted">
+      <input class="form-control" id="teamTwoGoals" name="teamTwoGoals" #teamTwoGoals="ngModel" [(ngModel)]="gameData.team_two_goals" type="number" placeholder="Team Two Goals" required />
+      <label class="control-label" for="teamTwoGoals">Team Two Goals</label>
     </div>
   </div>
 
   <div class="form-group material-form" [class.error]="date.invalid && form.submitted">
-    <input class="form-control" id="date" name="date" #date="ngModel" type="date" [(ngModel)]="gameData.date" placeholder="Game Date" required />
+    <input class="form-control" id="date" name="date" #date="ngModel" type="datetime-local" [(ngModel)]="gameData.date" placeholder="Game Date" required />
     <label class="control-label" for="date">Game Date</label>
   </div>
 

@@ -3,10 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable, of } from 'rxjs';
 import { Teams, TeamsPayload, Team } from '../interfaces/teams.interface';
-import { Game, Games } from '../interfaces/games.interface';
+import { Game, Games, GameResult } from '../interfaces/games.interface';
 import { Players, PlayersPayload } from '../interfaces/players.interface';
 import { ApiRoutes } from './api-routes.enum';
-import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +34,7 @@ export class ApiService {
     return this.httpClient.post<Games>(this.endpoint + ApiRoutes.getGames, payload);
   }
 
-  addGame(gameData: Game): Observable<Games> {
-    return this.httpClient.post<Games>(this.endpoint + ApiRoutes.addGame, gameData);
+  addGame(gameData: Game): Observable<GameResult> {
+    return this.httpClient.post<GameResult>(this.endpoint + ApiRoutes.addGame, gameData);
   }
 }

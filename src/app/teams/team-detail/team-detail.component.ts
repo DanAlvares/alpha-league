@@ -13,15 +13,23 @@ import { Game } from 'src/app/interfaces/games.interface';
 })
 export class TeamDetailComponent implements OnInit {
   public team: Team;
+  public teams: Team[];
   public games: Game[];
   public players: Player[];
   public addNewGame: boolean;
 
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const teamId = this.route.snapshot.params.id;
-    const teams = this.route.snapshot.data.data;
-    this.team = teams.filter(team => teamId === team.id)[0];
+    this.teams = this.route.snapshot.data.data;
+    this.team = this.teams.filter(team => teamId === team.id)[0];
+  }
+
+  updateGames(result): void {
+    result.game.team_one_name = this.teams.find(team => team.id === result.game.team_one_id).name;
+    result.game.team_two_name = this.teams.find(team => team.id === result.game.team_two_id).name;
+    this.team.games.unshift(result.game);
+    this.addNewGame = false;
   }
 }

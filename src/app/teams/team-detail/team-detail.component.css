@@ -2,13 +2,14 @@
   --active-color: #ccc;
 }
 h2{
-  font-size: 11vmin;
+  font-size: 9vmin;
   padding: 1rem 0 0;
 }
 .team-info {
   background-color: #eee;
   margin-top: -1rem;
   padding-bottom: 1rem;
+  position: relative;
 }
 .team-info .logo {
   float: left;
@@ -32,7 +33,12 @@ h2{
   left: -1px;
   width: 105%;
 }
-
+app-games, app-players-list {
+  box-shadow: 0 2px 5px #ccc;
+  display: block;
+  overflow: auto;
+  height: 600px;
+}
 @media (max-width: 768px) {
   .col-6 {
     flex: 0 0 100%;
@@ -43,6 +49,14 @@ h2{
 @media (max-width: 576px) {
   .logo{
     float: none;
-    width:100px
+  }
+  .team-info .logo {
+    float: none;
+    margin:auto;
+    display: block;
+  }
+  .team-info .shirt{
+    top: 1rem;
+    position: absolute;
   }
 }

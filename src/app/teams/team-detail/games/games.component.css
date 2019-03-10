@@ -1,0 +1,14 @@
+
+ul {
+  padding: 0;
+}
+strong {
+  display: block;
+  font-size: 2rem;
+}
+p {
+  margin-bottom: 0;
+}
+.list-group-item:nth-child(2n) {
+  background-color: var(--light);
+}

@@ -66,6 +66,7 @@ describe('ApiService', () => {
       const MockGameData = {
         date: '2018-08-04T07:41:55.172Z',
         team_one_id: '59d6e27e-685c-48a3-8d31-c546efcda0f0',
+        team_two_id: '59d6e27e-685c-48a3-8d31-c546efcd1213',
         team_one_goals: 2,
         team_two_goals: 4
       };

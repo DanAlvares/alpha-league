@@ -1,16 +1,16 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>Date Played</th>
-      <th>Goals For</th>
-      <th>Goals Against</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let game of games">
-      <td>{{ game.date | date: 'dd MMM yyyy, HH:mm' }}</td>
-      <td>{{ game.team_one_goals }}</td>
-      <td>{{ game.team_two_goals }}</td>
-    </tr>
-  </tbody>
-</table>
+
+<ul class="list-goup">
+  <li class="list-group-item text-center" *ngFor="let game of games">
+    <p>{{ game.date | date: 'dd MMM yyyy, HH:mm' }}</p>
+    <div class="row">
+      <div class="col-6">
+        <strong>{{ game.team_one_goals }}</strong>
+        <a routerLink="['/team', game.team_one_id ]">{{ game.team_one_name }}</a>
+      </div>
+      <div class="col-6">
+          <strong>{{ game.team_two_goals }}</strong>
+          <a routerLink="['/team', game.team_two_id ]">{{ game.team_two_name }}</a>
+      </div>
+  </div>
+  </li>
+</ul>

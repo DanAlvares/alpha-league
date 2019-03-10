@@ -20,23 +20,20 @@ export class TeamsListingComponent implements OnInit {
 
   gamesWon(team: Team): number {
     return team.games.filter(game =>
-        game.team_one_id === team.id &&
-        game.team_one_goals > game.team_two_goals
+        (game.team_one_id === team.id && game.team_one_goals > game.team_two_goals) ||
+        (game.team_two_id === team.id && game.team_two_goals > game.team_one_goals)
       ).length;
   }
 
   gamesLost(team: Team): number {
     return team.games.filter(game =>
-        game.team_one_id === team.id &&
-        game.team_one_goals < game.team_two_goals
+        (game.team_one_id === team.id && game.team_one_goals < game.team_two_goals) ||
+        (game.team_two_id === team.id && game.team_two_goals < game.team_one_goals)
       ).length;
   }
 
   gamesDrawn(team: Team): number {
-    return team.games.filter(game =>
-        game.team_one_id === team.id &&
-        game.team_one_goals === game.team_two_goals
-      ).length;
+    return team.games.filter(game => game.team_one_goals === game.team_two_goals).length;
   }
 
   totalPoints(team: Team): number {

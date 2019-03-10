@@ -27,8 +27,8 @@
       </section>
     </div>
   </div>
-</div>
 
-<app-modal [modalHeading]="'Add a new game'" (close)="addNewGame = false" *ngIf="addNewGame">
-  <app-new-game [teamId]="team.id"></app-new-game>
-</app-modal>
+  <app-modal [modalHeading]="'Add a new game'" (close)="addNewGame = false" *ngIf="addNewGame">
+    <app-new-game [teamId]="team.id" (gameResult)="updateGames($event)" [teams]="teams"></app-new-game>
+  </app-modal>
+</div>
