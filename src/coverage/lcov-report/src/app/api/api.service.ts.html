@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">91.3% </span>
+        <span class="strong">95% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>21/23</span>
+        <span class='fraction'>19/20</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">71.43% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/7</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">95% </span>
+        <span class="strong">94.44% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>19/20</span>
+        <span class='fraction'>17/18</span>
       </div>
     </div>
     <p class="quiet">
@@ -86,81 +86,75 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a>
-<a name='L42'></a><a href='#L42'>42</a>
-<a name='L43'></a><a href='#L43'>43</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable, of } from 'rxjs';
 import { Teams, TeamsPayload, Team } from '../interfaces/teams.interface';
-import { Game, Games } from '../interfaces/games.interface';
+import { Game, Games, GameResult } from '../interfaces/games.interface';
 import { Players, PlayersPayload } from '../interfaces/players.interface';
 import { ApiRoutes } from './api-routes.enum';
-import { map } from 'rxjs/operators';
 &nbsp;
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  public teams: Team[] = [];
+  public teams: Team[];
 &nbsp;
-  public games: Game[] = [];
+  public players: Players;
+&nbsp;
+  public games: Games;
 &nbsp;
   private endpoint = environment.API_ENDPOINT;
 &nbsp;
   constructor(private httpClient: HttpClient) { }
-&nbsp;
-<span class="fstat-no" title="function not covered" >  getGamesByTeam(</span>teamId: string) {
-<span class="cstat-no" title="statement not covered" >    return this.games.filter(<span class="fstat-no" title="function not covered" >game </span>=&gt; <span class="cstat-no" title="statement not covered" >teamId === game.team_one_id);</span></span>
-  }
 &nbsp;
   getTeams(payload: TeamsPayload): Observable&lt;Teams&gt; {
     return this.httpClient.post&lt;Teams&gt;(this.endpoint + ApiRoutes.getTeams, payload);
   }
 &nbsp;
   getPlayers(payload: PlayersPayload): Observable&lt;Players&gt; {
+    if (this.players) { <span class="cstat-no" title="statement not covered" >return of(this.players); </span>}
     return this.httpClient.post&lt;Players&gt;(this.endpoint + ApiRoutes.getPlayers, payload);
   }
 &nbsp;
@@ -168,8 +162,8 @@ export class ApiService {
     return this.httpClient.post&lt;Games&gt;(this.endpoint + ApiRoutes.getGames, payload);
   }
 &nbsp;
-  addGame(gameData: Game): Observable&lt;Games&gt; {
-    return this.httpClient.post&lt;Games&gt;(this.endpoint + ApiRoutes.addGame, gameData);
+  addGame(gameData: Game): Observable&lt;GameResult&gt; {
+    return this.httpClient.post&lt;GameResult&gt;(this.endpoint + ApiRoutes.addGame, gameData);
   }
 }
 &nbsp;</pre></td></tr>
@@ -178,7 +172,7 @@ export class ApiService {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Mar 09 2019 22:04:17 GMT+0000 (Greenwich Mean Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Mar 10 2019 20:54:44 GMT+0000 (Greenwich Mean Time)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

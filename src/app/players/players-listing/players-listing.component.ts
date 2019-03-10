@@ -17,8 +17,8 @@ export class PlayersComponent implements OnInit {
     this.playersList = this.players;
   }
 
-  filterPlayers(event): void {
+  filterPlayers(value): void {
     this.playersList = this.players.filter(player =>
-      Object.values(player).toString().toLowerCase().indexOf(event.target.value.toLowerCase().trim()) !== -1);
+      Object.values(player).toString().toLowerCase().indexOf(value.toLowerCase().trim()) !== -1);
   }
 }

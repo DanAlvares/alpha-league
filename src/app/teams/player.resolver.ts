@@ -14,18 +14,12 @@ export class PlayerResolver implements Resolve<Players> {
   constructor(private apiService: ApiService) { }
 
   resolve(activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<Players> {
-    if (this.apiService.players) { return of(this.apiService.players); }
-
-    // return this.apiService.getPlayers({})
-    //   .pipe(map((players: Players) => players));
-
-
     return forkJoin(
       this.apiService.getTeams({}),
       this.apiService.getPlayers({})
     ).pipe(mergeMap(([teams, players]: [Teams, Players]) => {
         const playersData = players.data.map(player => {
-          player.team_name = teams.data.filter(team => team.id === player.team_id)[0].name;
+          player.team_name = teams.data.find(team => team.id === player.team_id).name;
           return player;
         });
         this.apiService.players = players;

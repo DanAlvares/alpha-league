@@ -6,7 +6,8 @@
 	$ npm i
 	$ npm start 
 
-Or you can just [open in Stackblitz](https://stackblitz.com/github/DanAlvares/alpha-league) to view the code.
+Or you can just [open in Stackblitz](https://stackblitz.com/github/DanAlvares/alpha-league) to view the code.  
+[View generated documentation](https://ng-alpha-football.netlify.com/docs/index.html)
 
 ## Running the tests  
 	$ npm test 
@@ -29,3 +30,6 @@ To avoid building out an entire pattern library, I have used pieces of the Boots
 ## Workflow
 I have used gitflow workflow process. Creating feature branches and merging to develop once a feature is done. I setup a basic CI/CD process whereby each commit lints staged .ts files and runs the whole unit test suite (mentioned in Running the tests). Merging to master automatically deploys to Netlify. https://ng-alpha-football.netlify.com/
 
+## TODO
+[ ] Player detail page
+[ ] Make PWA

@@ -14,7 +14,7 @@ export class TeamResolver implements Resolve<Team[]> {
 
   constructor(private apiService: ApiService) { }
 
-  resolve(activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<Team[]> {
+  resolve(): Observable<Team[]> {
     if (this.apiService.teams) { return of(this.apiService.teams); }
 
     return forkJoin(
@@ -28,7 +28,10 @@ export class TeamResolver implements Resolve<Team[]> {
           return game;
         });
         const teamData = teams.data.map(team => {
-          team.games = games.data.filter(game => game.team_one_id === team.id || game.team_two_id === team.id);
+          team.games = games.data.filter(game =>
+            (game.team_one_id === team.id || game.team_two_id === team.id) &&
+            (game.team_one_id !== game.team_two_id)
+          );
           team.players = players.data.filter(player => player.team_id === team.id);
           return team;
         });

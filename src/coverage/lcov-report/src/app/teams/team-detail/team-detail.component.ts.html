@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">57.14% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>12/21</span>
+        <span class='fraction'>21/21</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">16.67% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/6</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">56.25% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>9/16</span>
+        <span class='fraction'>15/15</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -79,37 +79,41 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit } from '@angular/core';
@@ -127,22 +131,24 @@ import { Game } from 'src/app/interfaces/games.interface';
 })
 export class TeamDetailComponent implements OnInit {
   public team: Team;
+  public teams: Team[];
   public games: Game[];
   public players: Player[];
+  public addNewGame: boolean;
 &nbsp;
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ngOnInit(</span>) {
-    const teamId = <span class="cstat-no" title="statement not covered" >this.route.snapshot.params.id;</span>
-<span class="cstat-no" title="statement not covered" >    this.team = this.apiService.teams.filter(<span class="fstat-no" title="function not covered" >team </span>=&gt; <span class="cstat-no" title="statement not covered" >teamId === team.id)[</span>0];</span>
-<span class="cstat-no" title="statement not covered" >    this.getPlayers(teamId);</span>
-<span class="cstat-no" title="statement not covered" >    this.games = this.apiService.getGamesByTeam(teamId);</span>
+  ngOnInit(): void {
+    const teamId = this.route.snapshot.params.id;
+    this.teams = this.route.snapshot.data.data;
+    this.team = this.teams.filter(team =&gt; teamId === team.id)[0];
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  getPlayers(</span></span>teamId: string): void {
-<span class="cstat-no" title="statement not covered" >    this.apiService.getPlayers({ team_id: teamId})</span>
-    .pipe(map(<span class="fstat-no" title="function not covered" >res </span>=&gt; <span class="cstat-no" title="statement not covered" >res.data))</span>
-    .subscribe(<span class="fstat-no" title="function not covered" >(p</span>layers: Player[]) =&gt; <span class="cstat-no" title="statement not covered" >this.players = players);</span>
+  updateGames(result): void {
+    result.game.team_one_name = this.teams.find(team =&gt; team.id === result.game.team_one_id).name;
+    result.game.team_two_name = this.teams.find(team =&gt; team.id === result.game.team_two_id).name;
+    this.team.games.unshift(result.game);
+    this.addNewGame = false;
   }
 }
 &nbsp;</pre></td></tr>
@@ -151,7 +157,7 @@ export class TeamDetailComponent implements OnInit {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Mar 09 2019 22:04:17 GMT+0000 (Greenwich Mean Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Mar 10 2019 20:54:44 GMT+0000 (Greenwich Mean Time)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

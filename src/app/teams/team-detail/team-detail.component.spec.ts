@@ -19,6 +19,9 @@ describe('TeamDetailComponent', () => {
     snapshot: {
         params: {
           id: '123456'
+        },
+        data: {
+          data: [{id: '123456' }]
         }
       }
     };
@@ -45,6 +48,19 @@ describe('TeamDetailComponent', () => {
   });
 
   it('should create', () => {
+    fixture.detectChanges();
     expect(component).toBeTruthy();
+  });
+
+  it('should update games list', () => {
+    component.teams = [{id: '123456', name: 'Mock Team' }] as any;
+    component.team = { id: '123456', name: 'Mock Team', games: [{team_one_id: '123456', team_two_id: '123456'}] } as any;
+
+    const newGameResult = { game: { team_one_id: '123456', team_two_id: '123456' } };
+
+    component.updateGames(newGameResult);
+
+    expect(component.addNewGame).toBe(false);
+    expect(component.team.games.length).toBe(2);
   });
 });

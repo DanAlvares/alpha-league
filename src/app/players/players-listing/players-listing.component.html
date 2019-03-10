@@ -2,7 +2,7 @@
   <h2>Players</h2>
 
   <div class="form-group material-form">
-    <input class="form-control" id="playerSearch" (keyup)="filterPlayers($event)" type="text" placeholder="Search players" />
+    <input class="form-control" id="playerSearch" (keyup)="filterPlayers($event.target.value)" type="text" placeholder="Search players" />
     <label class="control-label" for="playerSearch">Search players</label>
   </div>
 

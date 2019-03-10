@@ -63,7 +63,19 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -80,22 +92,46 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;h4&gt;Add a new game result&lt;/h4&gt;
-&lt;form&gt;
-  &lt;div class="form-group material-form"&gt;
-    &lt;input class="form-control" id="teamOneScore" type="text" placeholder="Team One Score" /&gt;
-    &lt;label class="control-label" for="teamOneScore"&gt;Team One Score&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="form-group material-form"&gt;
-    &lt;input class="form-control" id="teamTwoScore" type="test" placeholder="Team Two Score" /&gt;
-    &lt;label class="control-label" for="teamTwoScore"&gt;Team Two Score&lt;/label&gt;
-  &lt;/div&gt;
-  &lt;div class="form-group material-form"&gt;
-    &lt;input class="form-control" id="date" type="date" placeholder="ate" /&gt;
-    &lt;label class="control-label" for="date"&gt;date&lt;/label&gt;
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;form (ngSubmit)="addGame(form)" name="form" #form="ngForm" novalidate&gt;
+&nbsp;
+  &lt;div class="select"&gt;
+    &lt;select name="team" id="team" class="form-group material-form" [(ngModel)]="gameData.team_two_id"&gt;
+      &lt;option value=""&gt;Select a team&lt;/option&gt;
+      &lt;option *ngFor="let team of teams" [hidden]="team.id === teamId" [value]="team.id"&gt;{{ team.name }}&lt;/option&gt;
+    &lt;/select&gt;
   &lt;/div&gt;
 &nbsp;
-  &lt;div class="form-group"&gt;&lt;button type="button" class="btn btn-success btn-block mt-4"&gt;Add new result&lt;/button&gt;&lt;/div&gt;
+  &lt;div class="flex"&gt;
+    &lt;div class="form-group input material-form" [class.error]="teamOneGoals.invalid &amp;&amp; form.submitted"&gt;
+      &lt;input class="form-control" id="teamOneGoals" name="teamOneGoals" #teamOneGoals="ngModel" [(ngModel)]="gameData.team_one_goals" type="number" placeholder="Team One Goals" required /&gt;
+      &lt;label class="control-label" for="teamOneGoals"&gt;Team One Goals&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group input material-form" [class.error]="teamTwoGoals.invalid &amp;&amp; form.submitted"&gt;
+      &lt;input class="form-control" id="teamTwoGoals" name="teamTwoGoals" #teamTwoGoals="ngModel" [(ngModel)]="gameData.team_two_goals" type="number" placeholder="Team Two Goals" required /&gt;
+      &lt;label class="control-label" for="teamTwoGoals"&gt;Team Two Goals&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&nbsp;
+  &lt;div class="form-group material-form" [class.error]="date.invalid &amp;&amp; form.submitted"&gt;
+    &lt;input class="form-control" id="date" name="date" #date="ngModel" type="datetime-local" [(ngModel)]="gameData.date" placeholder="Game Date" required /&gt;
+    &lt;label class="control-label" for="date"&gt;Game Date&lt;/label&gt;
+  &lt;/div&gt;
+&nbsp;
+  &lt;div class="form-group"&gt;
+    &lt;button type="submit" class="btn btn-success btn-block mt-4"&gt;Add new result&lt;/button&gt;
+  &lt;/div&gt;
 &lt;/form&gt;
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -103,7 +139,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Mar 09 2019 22:04:17 GMT+0000 (Greenwich Mean Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Mar 10 2019 20:54:44 GMT+0000 (Greenwich Mean Time)
 </div>
 </div>
 <script src="../../../../../../prettify.js"></script>

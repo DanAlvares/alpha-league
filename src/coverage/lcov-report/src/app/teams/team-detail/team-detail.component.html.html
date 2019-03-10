@@ -57,7 +57,53 @@
 <a name='L9'></a><a href='#L9'>9</a>
 <a name='L10'></a><a href='#L10'>10</a>
 <a name='L11'></a><a href='#L11'>11</a>
-<a name='L12'></a><a href='#L12'>12</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -69,15 +115,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;div *ngIf="team"&gt;
-    &lt;img class="logo" [src]="team.logo_url" [alt]="team.name" /&gt;
-    &lt;h2&gt;{{ team.name }}&lt;/h2&gt;
-&nbsp;
-  &lt;div class="clearfix"&gt;
-    &lt;div class="row"&gt;
-      &lt;app-team-players class="col-6" [players]="players"&gt;&lt;/app-team-players&gt;
-      &lt;app-games class="col-6" [games]="games"&gt;&lt;/app-games&gt;
+  &lt;div class="team-info clearfix"&gt;
+    &lt;div class="container"&gt;
+      &lt;img class="logo" [src]="team.logo_url" [alt]="team.name" /&gt;
+      &lt;h2&gt;{{ team.name }}
+        &lt;span class="shirt" [style.background]="team.colour"&gt;
+          &lt;img src="../../../assets/shirt-outline-gray.png" /&gt;
+        &lt;/span&gt;
+      &lt;/h2&gt;
+      &lt;p&gt;&lt;strong&gt;Budget: &lt;/strong&gt; {{ team.budget | currency : 'GBP' }}&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Founded: &lt;/strong&gt; {{ team.founded }}&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;City: &lt;/strong&gt; {{ team.city }}&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+&nbsp;
+  &lt;div class="container pt-4"&gt;
+  &lt;div class="row"&gt;
+    &lt;section class="col-6"&gt;
+      &lt;h3&gt;Players&lt;/h3&gt;
+      &lt;app-players-list [players]="team.players" [hide]="'Team,Value,Nationality,Age'"&gt;&lt;/app-players-list&gt;
+    &lt;/section&gt;
+&nbsp;
+    &lt;section class="col-6"&gt;
+        &lt;button class="btn btn-primary float-right" (click)="addNewGame = true"&gt;Add game&lt;/button&gt;
+        &lt;h3&gt;Games&lt;/h3&gt;
+        &lt;app-games [games]="team.games"&gt;&lt;/app-games&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&nbsp;
+  &lt;app-modal [modalHeading]="'Add a new game'" (close)="addNewGame = false" *ngIf="addNewGame"&gt;
+    &lt;app-new-game [teamId]="team.id" (gameResult)="updateGames($event)" [teams]="teams"&gt;&lt;/app-new-game&gt;
+  &lt;/app-modal&gt;
 &lt;/div&gt;
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -85,7 +154,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Mar 09 2019 22:04:17 GMT+0000 (Greenwich Mean Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Mar 10 2019 20:54:44 GMT+0000 (Greenwich Mean Time)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

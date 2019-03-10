@@ -36,4 +36,13 @@ describe('PlayersComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should filter players', () => {
+    // Arrange
+    component.players = [{name: 'Dan'}, {name: 'Yee'}] as any;
+    // Act
+    component.filterPlayers('Da');
+    // Assert
+    expect(component.playersList.length).toBe(1);
+  });
 });
