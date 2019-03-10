@@ -13,7 +13,7 @@ Or you can just [open in Stackblitz](https://stackblitz.com/github/DanAlvares/al
 	$ npm test 
 	$ npm run test:coverage 
 By default, the Angular CLI sets up Jasmine & Karma as the testing framework. I replaced that with Jest.   
-There are 2 commands for running tests, with or without coverage. Tests run on commit. This might scale but for now, they run in under 10 seconds, which I think is acceptable.   
+There are 2 commands for running tests, with or without coverage. 28 unit tests (13 test suites) run on commit as they run in under 5 seconds, which I think is acceptable at this scale.   
 [View test coverage](https://ng-alpha-football.netlify.com/coverage/lcov-report)   
  
 
