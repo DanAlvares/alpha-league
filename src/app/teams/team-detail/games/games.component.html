@@ -5,11 +5,11 @@
     <div class="row">
       <div class="col-6">
         <strong>{{ game.team_one_goals }}</strong>
-        <a routerLink="['/team', game.team_one_id ]">{{ game.team_one_name }}</a>
+        <a routerLink="/team/{{ game.team_one_id }}">{{ game.team_one_name }}</a>
       </div>
       <div class="col-6">
           <strong>{{ game.team_two_goals }}</strong>
-          <a routerLink="['/team', game.team_two_id ]">{{ game.team_two_name }}</a>
+          <a routerLink="/team/{{ game.team_two_id }}">{{ game.team_two_name }}</a>
       </div>
   </div>
   </li>
